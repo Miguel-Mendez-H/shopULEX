@@ -1,0 +1,14 @@
+
+<div class='tittlescategories' *ngFor="let category of categoriesXproducts">
+    <div class="tittlepropierty">
+  {{ category.name }}
+</div>
+  <product-component
+    *ngFor="let product of category.products"
+    [name]=product.name
+    [price]=product.price.toLocaleString()
+    [image]="'https://assets.compramass.com/products/'+product.ean+'-80@3x.jpg'"
+
+  >
+  </product-component>
+</div>
